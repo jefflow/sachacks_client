@@ -40,7 +40,7 @@ class DrugChart extends React.Component {
                 title:{
                     display:true,
                     text:`Drugs vs. Total number of ${type}`,
-                    fontSize:10
+                    fontSize:20
                 },
                 legend:{
                     display:true,

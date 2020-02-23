@@ -1,10 +1,9 @@
 import React from "react";
-import HeaderBar from "../../headerbar/index";
-
+import SearchBar from "components/searchbar/index.js";
+import DeathData from "components/death/index.js"
 import { StyledDrugContainer } from "../../drugContainer/style"
-import DataTable from "../../../components/table/index"
 
-export default class Analytics extends React.Component {
+export default class Deaths extends React.Component {
     constructor(props) {
         super(props);
 
@@ -15,13 +14,14 @@ export default class Analytics extends React.Component {
         return (
             <>
                 <div style={{ marginLeft: "300px", background: "white", boxShadow: "0px 3px 6px #0000000B" }}>
-                    <HeaderBar name="Analytics" />
+                    <SearchBar name="Deaths" />
                 </div>
                 <div style={{ marginLeft: "300px" }}>
                     <StyledDrugContainer>
-                        <DataTable />
+                        <DeathData />
                     </StyledDrugContainer>
                 </div>
+                
             </>
         );
     }

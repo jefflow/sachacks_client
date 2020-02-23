@@ -1,4 +1,10 @@
-import { TOGGLEADMINBARSUCCESS, GETDRUGUSERBYSTATE, SETCOUNTRYSTATE } from "../actions";
+import { 
+    TOGGLEADMINBARSUCCESS,
+    GETDRUGUSERBYSTATE, 
+    SETCOUNTRYSTATE, 
+    GETCRIMEBYSTATE ,
+    GETDEATHBYSTATE
+} from "../actions";
 
 const initialState = {
     adminBarView: true,
@@ -20,6 +26,15 @@ const initialState = {
             y_axis : []
         }
     },
+    crime: {
+        larceny: null,
+        burglary: null,
+        assault: null,
+        vehicle_theft: null
+    },
+    death: [
+        {}
+    ],
     state: "CALIFORNIA"
 
 };
@@ -53,6 +68,16 @@ export const Reducer = ( state = initialState, action ) => {
             return Object.assign({}, state, {
                 ...state,
                 State: action.payload
+            });
+        case GETCRIMEBYSTATE:
+            return Object.assign({}, state, {
+                ...state,
+                crime: action.payload
+            });
+        case GETDEATHBYSTATE:
+            return Object.assign({}, state, {
+                ...state,
+                death: action.payload
             });
         case GETDRUGUSERBYSTATE:
             return Object.assign({}, state, {

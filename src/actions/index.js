@@ -23,6 +23,18 @@ export const setCountryState = payload => ({
     payload: payload
 });
 
+export const GETCRIMEBYSTATE = "GETCRIMEBYSTATE";
+export const getCrimeByState = payload => ({
+    type: GETCRIMEBYSTATE,
+    payload: payload
+});
+
+export const GETDEATHBYSTATE = "GETDEATHBYSTATE";
+export const getDeathByState = payload => ({
+    type: GETDEATHBYSTATE,
+    payload: payload
+});
+
 
 
 // THIS ARE ALL THE DISPATCHERS
@@ -32,12 +44,30 @@ export const toggleAdminBarView  = toggle => dispatch => {
 }
 
 export const setStateView = state => dispatch => {
-    console.log("triggered", state)
+    console.log("triggered set state view", state)
     dispatch(setCountryState(state))
 }
 
+export const getCrimeByStateData  = state => dispatch => {
+    console.log("triggered get crime by state", state)
+    
+    axios.get(`${API}/crime/${state}`)
+    .then(a => {
+        dispatch(getCrimeByState(a.data))
+    })
+}
+
+export const getDeathByStateData  = state => dispatch => {
+    console.log("triggered get death by state", state)
+    
+    axios.get(`${API}/death/${state}`)
+    .then(res => {
+        dispatch(getDeathByState(res.data))
+    })
+}
+
 export const getDrugByStateData  = state => dispatch => {
-    console.log("triggered", state)
+    console.log("triggered get drug by state data", state)
     
     axios.get(`${API}/drug/user/${state}`)
     .then(a => {

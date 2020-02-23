@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { connect } from "react-redux";
 
-import { getDrugByStateData, setStateView } from "actions/index.js"
+import { getDrugByStateData, setStateView, getCrimeByStateData, getDeathByStateData } from "actions/index.js"
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -30,6 +30,8 @@ class SearchBar extends React.Component {
             
             this.props.getDrugByStateData(this.state.State)
             this.props.setStateView(this.state.State)
+            this.props.getCrimeByStateData(this.state.State)
+            this.props.getDeathByStateData(this.state.State)
             e.target.value = ""
 
         }    
@@ -67,6 +69,12 @@ const mapDispatchToProps = dispatch => {
         },
         setStateView : state => {
             dispatch(setStateView(state))
+        },
+        getCrimeByStateData : state => {
+            dispatch(getCrimeByStateData(state))
+        },
+        getDeathByStateData : state => {
+            dispatch(getDeathByStateData(state))
         }
     };
 };

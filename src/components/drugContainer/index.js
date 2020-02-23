@@ -16,12 +16,12 @@ class DrugContainer extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        
         return (
             <StyledDrugContainer>
                 <StyledContentContainer>
                     <StyledContentMain>
-                        <StyledHeadingPrimary>TOP 10 Drug Content By State</StyledHeadingPrimary>
+                        <StyledHeadingPrimary>TOP 10 Drug Content By State | 2015</StyledHeadingPrimary>
                         {/* <StyledNormalText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris ipsum, volutpat eu egestas nec, tristique sit amet mi. Mauris pulvinar mauris non auctor viverra. In et sem vel ipsum scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris ipsum, volutpat eu egestas nec, tristique sit amet mi. Mauris pulvinar mauris non auctor viverra. In et sem vel ipsum scelerisque luctus.</StyledNormalText> */}
                     </StyledContentMain>
 

@@ -12,6 +12,7 @@ export default class Analytics extends React.Component {
         return (
             <div style={{ marginLeft: "300px" }}>
                 <HeaderBar name="Settings" />
+                
             </div>
         );
     }

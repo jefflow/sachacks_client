@@ -45,17 +45,17 @@ class AdminBar extends React.Component {
                     </StyledAdminLink>
                 </Link>
 
-                <Link to="analytics" style={{ textDecoration: "none" }}>
+                <Link to="crime" style={{ textDecoration: "none" }}>
                     <StyledAdminLink>
                         <StyledLinkIcon src={analyticsIcon} alt="analytics"></StyledLinkIcon>
-                        <StyledLinkLabel>Analytics</StyledLinkLabel>
+                        <StyledLinkLabel>Crime</StyledLinkLabel>
                     </StyledAdminLink>
                 </Link>
 
-                <Link to="users" style={{ textDecoration: "none" }}>
+                <Link to="deaths" style={{ textDecoration: "none" }}>
                     <StyledAdminLink>
                         <StyledLinkIcon src={usersIcon} alt="users"></StyledLinkIcon>
-                        <StyledLinkLabel>Users</StyledLinkLabel>
+                        <StyledLinkLabel>Deaths</StyledLinkLabel>
                     </StyledAdminLink>
                 </Link>
 
