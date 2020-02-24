@@ -1,6 +1,8 @@
 # SacHacks 2020 - Opioid Data Center
-A website that gathers and analyzes data about opioid usage
+### **Winner for Best CeDAR Hack**
+A website that gathers and analyzes data about opioid usage. 
 
+---
 ## Our DevPost Page
 https://devpost.com/software/opioid-data-center
 
